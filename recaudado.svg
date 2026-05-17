@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <!-- Moneda de fondo -->
+  <circle cx="24" cy="26" r="18" fill="#fef9c3" stroke="#eab308" stroke-width="2"/>
+  <circle cx="24" cy="26" r="13" fill="#fde047" stroke="#ca8a04" stroke-width="1.5"/>
+  <!-- Letra Q -->
+  <text x="24" y="32" font-family="Georgia, serif" font-size="16" font-weight="bold" fill="#92400e" text-anchor="middle">Q</text>
+  <!-- Monedas pequeñas detrás -->
+  <circle cx="8" cy="34" r="6" fill="#fde047" stroke="#ca8a04" stroke-width="1.5"/>
+  <text x="8" y="37" font-family="Georgia, serif" font-size="6" font-weight="bold" fill="#92400e" text-anchor="middle">Q</text>
+  <circle cx="40" cy="34" r="6" fill="#fde047" stroke="#ca8a04" stroke-width="1.5"/>
+  <text x="40" y="37" font-family="Georgia, serif" font-size="6" font-weight="bold" fill="#92400e" text-anchor="middle">Q</text>
+  <!-- Brillito -->
+  <circle cx="18" cy="20" r="2" fill="white" opacity="0.5"/>
+</svg>

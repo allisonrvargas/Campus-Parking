@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <!-- Fila 1 -->
+  <rect x="3" y="4" width="12" height="12" rx="3" fill="#eef3ff" stroke="#a84bb1" stroke-width="1.5"/>
+  <rect x="18" y="4" width="12" height="12" rx="3" fill="#eef3ff" stroke="#a84bb1" stroke-width="1.5"/>
+  <rect x="33" y="4" width="12" height="12" rx="3" fill="#fee2e2" stroke="#ef4444" stroke-width="1.5"/>
+  <!-- Fila 2 -->
+  <rect x="3" y="19" width="12" height="12" rx="3" fill="#eef3ff" stroke="#a84bb1" stroke-width="1.5"/>
+  <rect x="18" y="19" width="12" height="12" rx="3" fill="#fee2e2" stroke="#ef4444" stroke-width="1.5"/>
+  <rect x="33" y="19" width="12" height="12" rx="3" fill="#eef3ff" stroke="#a84bb1" stroke-width="1.5"/>
+  <!-- Fila 3 -->
+  <rect x="3" y="34" width="12" height="12" rx="3" fill="#fee2e2" stroke="#ef4444" stroke-width="1.5"/>
+  <rect x="18" y="34" width="12" height="12" rx="3" fill="#eef3ff" stroke="#a84bb1" stroke-width="1.5"/>
+  <rect x="33" y="34" width="12" height="12" rx="3" fill="#eef3ff" stroke="#a84bb1" stroke-width="1.5"/>
+  <!-- Iconos ocupados (X roja) -->
+  <line x1="36" y1="7" x2="42" y2="13" stroke="#ef4444" stroke-width="1.8" stroke-linecap="round"/>
+  <line x1="42" y1="7" x2="36" y2="13" stroke="#ef4444" stroke-width="1.8" stroke-linecap="round"/>
+  <line x1="21" y1="22" x2="27" y2="28" stroke="#ef4444" stroke-width="1.8" stroke-linecap="round"/>
+  <line x1="27" y1="22" x2="21" y2="28" stroke="#ef4444" stroke-width="1.8" stroke-linecap="round"/>
+  <line x1="6" y1="37" x2="12" y2="43" stroke="#ef4444" stroke-width="1.8" stroke-linecap="round"/>
+  <line x1="12" y1="37" x2="6" y2="43" stroke="#ef4444" stroke-width="1.8" stroke-linecap="round"/>
+</svg>

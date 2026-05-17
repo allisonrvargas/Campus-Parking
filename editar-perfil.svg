@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <!-- Cuerpo del lápiz -->
+  <rect x="10" y="8" width="12" height="30" rx="2" transform="rotate(-45 24 24)" fill="#a84bb1"/>
+  <!-- Parte superior (borrador) -->
+  <rect x="29" y="5" width="12" height="7" rx="2" transform="rotate(-45 24 24)" fill="#d62dac"/>
+  <!-- Punta -->
+  <polygon points="6,38 10,34 14,42" fill="#f74ff7"/>
+  <polygon points="6,38 10,42 14,42" fill="#1a1d2e" opacity="0.3"/>
+  <!-- Línea decorativa del lápiz -->
+  <line x1="15" y1="15" x2="33" y2="33" stroke="rgba(255,255,255,0.3)" stroke-width="2" stroke-linecap="round"/>
+  <!-- Brillo -->
+  <line x1="18" y1="12" x2="30" y2="24" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+</svg>
