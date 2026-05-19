@@ -1,7 +1,7 @@
 // Login
 function doLogin() {
   const email = $('li-email').value.trim();
-  const pass = $('li-pass').value;
+  const pass = $('li-pass').value.trim();
   const usuario = G('cp_u', null);
 
   if (usuario && email === usuario.email && pass === usuario.password) {
