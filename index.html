@@ -60,6 +60,11 @@
         <span class="ic"><img src="imagenes/ganancias.svg" alt="Ganancias" class="nav-icon"/></span>
         <span class="nav-lbl">Ganancias</span>
       </a>
+    </a>
+    <a onclick="goTo('pg-reporteDeServicios')" id="nav-pg-reporteDeServicios">
+      <span class="ic"><img src="imagenes/reporte.svg" alt="Reporte" class="nav-icon"/></span>
+      <span class="nav-lbl">Reporte</span>
+    </a>
     </nav>
     <div class="sidebar-footer">
       <button onclick="abrirPerfil()">
@@ -175,13 +180,26 @@
         <div class="ph"><h2>Ganancias</h2></div>
         <div class="g-total">
           <div><div class="g-lbl">Total recaudado</div><div class="g-big" id="g-total-val">Q0</div></div>
-          <img src="imagenes/recaudado.svg" style="width:56px;height:56px;"/>
+          <img src="imagenes/ganancias.svg" style="width:56px;height:56px;"/>
         </div>
         <div class="tw">
           <table>
             <thead><tr><th>Placa</th><th>Tipo</th><th>Fecha</th><th>Entrada</th><th>Salida</th><th>Horas</th><th>Costo</th></tr></thead>
             <tbody id="tb-gan"></tbody>
           </table>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+      <!-- REPORTE -->
+      <div class="page" id="pg-reporteDeServicios">
+
+        </div>
+        <div class="tw">
+
         </div>
       </div>
 
@@ -271,7 +289,11 @@
 <script src="tipos_de_vehiculos.js"></script>
 <script src="servicios_parqueo.js"></script>
 <script src="panel_inicio.js"></script>
+<script src="reporteDeServiciosPrestados.js"></script>
+
 
 
 </body>
-</html>
+</html>//Examen
+// Reporte de servicios prestados
+

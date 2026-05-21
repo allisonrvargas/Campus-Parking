@@ -12,7 +12,6 @@ function registrarEntrada() {
   } 
 
 
-  
 
   const tipo   = $('r-tipo').value;
   const fecha  = $('r-fecha').value;

@@ -21,6 +21,8 @@ function goTo(id) {
   if (id === 'pg-servicios') mostrarServicios();
   if (id === 'pg-tipos')     mostrarTipos();
   if (id === 'pg-ganancias') renderGanancias();
+  if (id=== 'reporteDeServiciosPrestados') renderReporteDeServicios();
+
 }
 
 // Abrir modal
