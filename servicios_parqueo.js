@@ -1,6 +1,19 @@
 // ===== REGISTRAR ENTRADA =====
 function registrarEntrada() {
   const placa  = $('r-placa').value.trim().toUpperCase();
+  
+
+
+  // ARREGLOOOOO FINAL PARA QUE LA PLACA NOS PERMITA INGRESAR VALORES VALIDOSSSS
+  const reglaPlaca = /^[PM](-)?\d{3}[A-Z]{3}$/;
+  if (!reglaPlaca.test(placa)) {
+    alert(" Error: La placa no es válida. Debe tener un formato como P-123ABC o M-123ABC.");
+    return; 
+  } 
+
+
+  
+
   const tipo   = $('r-tipo').value;
   const fecha  = $('r-fecha').value;
   const hora   = $('r-hora').value;
