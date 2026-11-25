@@ -90,11 +90,13 @@ function renderGanancias() {
   $('tb-gan').innerHTML = finalizados.slice().reverse().map(s => {
     const [h1, m1] = s.entrada.split(':').map(Number);
     const [h2, m2] = s.salida.split(':').map(Number);
-    const horas = ((h2 * 60 + m2) - (h1 * 60 + m1)) / 60;
+    let minutos = (h2 * 60 + m2) - (h1 * 60 + m1);
+    if (minutos <= 0) minutos += 24 * 60; // la salida fue al día siguiente (igual que al calcular el costo)
+    const horas = minutos / 60;
 
     return `<tr>
-      <td>${s.placa}</td>
-      <td>${s.tipo}</td>
+      <td>${esc(s.placa)}</td>
+      <td>${esc(s.tipo)}</td>
       <td>${s.fecha}</td>
       <td>${s.entrada}</td>
       <td>${s.salida}</td>

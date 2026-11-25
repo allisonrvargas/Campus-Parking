@@ -1,5 +1,7 @@
 # 💜 Campus Parking 🚗✨
 
+[![CI](https://github.com/allisonrvargas/Campus-Parking/actions/workflows/ci.yml/badge.svg)](https://github.com/allisonrvargas/Campus-Parking/actions/workflows/ci.yml)
+
 <p align="center">
   <img src="https://img.shields.io/badge/Status-Complete-ff6b35?style=for-the-badge&logo=checkmark" alt="Status"/>
   <img src="https://img.shields.io/badge/Level-Junior%20Advanced-a84bb1?style=for-the-badge" alt="Level"/>
@@ -48,8 +50,7 @@ El código está modularizado de forma limpia para facilitar su mantenimiento y 
 ├── panel_inicio.js               # Tablero de control, estadísticas y alertas dinámicas
 ├── espacios.js                   # Mapa interactivo de espacios de parqueo
 ├── servicios_parqueo.js          # Ingresos, salidas y cálculo de cobros
-├── tipos_de_vehiculos.js         # Administración de tarifas y categorías
-└── reporteDeServiciosPrestados.js # Reporte de servicios prestados
+└── tipos_de_vehiculos.js         # Administración de tarifas y categorías
 ```
 
 ---
@@ -61,6 +62,22 @@ El código está modularizado de forma limpia para facilitar su mantenimiento y 
 O en local, sin instalar nada: descarga o clona el repositorio y abre `index.html` en el navegador.
 
 **Cuenta de demostración:** `admin@campusparking.com` / `Admin123`
+
+---
+
+## 🧪 Pruebas
+
+```bash
+npm install
+npm test
+```n
+14 pruebas de integración con `node:test` y [jsdom](https://github.com/jsdom/jsdom): cargan `index.html` y sus scripts como en el navegador y simulan el uso real: inicio de sesión (y migración desde el formato antiguo), tipos de vehículo, validación de placas (`P-123ABC` o `M-123ABC`), espacios ocupados, cálculo del costo por horas exactas, turnos de medianoche, tabla de ganancias y protección contra HTML inyectado.
+
+Estas pruebas encontraron y ayudaron a corregir tres errores:
+
+- **HTML sin escapar:** el nombre de un tipo de vehículo se insertaba en `innerHTML` sin escapar; ahora todo texto escrito por el usuario pasa por `esc()`.
+- **Script roto:** `reporteDeServiciosPrestados.js` estaba cortado a la mitad (error de sintaxis en cada carga) y no se usaba; se eliminó. La pantalla de reportes es la de *Ganancias*.
+- **Horas en la tabla de ganancias:** en turnos de medianoche mostraba horas negativas aunque el costo estaba bien calculado.
 
 ---
 

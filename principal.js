@@ -25,6 +25,11 @@ function fmt(num, decimales) {
   });
 }
 
+// Escapa texto antes de ponerlo en innerHTML, para que lo escrito por el usuario nunca se interprete como HTML
+function esc(valor) {
+  return String(valor ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+}
+
 const SLOTS = 20;
 let indiceServicioActivo = null;
 

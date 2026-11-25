@@ -6,3 +6,6 @@ desktop.ini
 .idea/
 *.swp
 *.log
+
+# Dependencias
+node_modules/
