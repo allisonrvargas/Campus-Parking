@@ -8,7 +8,7 @@
     "test": "node --test test/*.test.js"
   },
   "devDependencies": {
-    "jsdom": "^26.0.0"
+    "jsdom": "^31.0.1"
   },
   "engines": { "node": ">=20" },
   "license": "MIT"
