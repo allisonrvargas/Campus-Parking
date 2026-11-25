@@ -40,14 +40,43 @@ Para lograr esta interfaz fluida y ligera, no se utilizaron frameworks pesados, 
 El código está modularizado de forma limpia para facilitar su mantenimiento y escalabilidad:
 
 ```text
-├── index.html               # Estructura principal y contenedores SPA
-├── style.css                # Paleta de colores, tipografía y layouts responsivos
-├── principal.js             # Métodos globales, atajos del DOM y helpers de LocalStorage
-├── autenticacion.js         # Lógica de inicio de sesión y edición de perfil
-├── panel_inicio.js          # Tablero de control, estadísticas y alertas dinámicas
-├── espacios.js              # Renderizado del mapa interactivo de parqueo
-├── servicios_parqueo.js     # Lógica de ingresos, salidas y cálculo de cobros
-└── tipos_de_vehiculos.js    # Panel de administración de tarifas y categorías
+├── index.html                    # Estructura principal y contenedores SPA
+├── style.css                     # Paleta de colores, tipografía y layouts responsivos
+├── principal.js                  # Helpers de LocalStorage, utilidades y hash de contraseñas
+├── interfaz.js                   # Navegación entre secciones y modales
+├── autenticacion.js              # Inicio de sesión y edición de perfil
+├── panel_inicio.js               # Tablero de control, estadísticas y alertas dinámicas
+├── espacios.js                   # Mapa interactivo de espacios de parqueo
+├── servicios_parqueo.js          # Ingresos, salidas y cálculo de cobros
+├── tipos_de_vehiculos.js         # Administración de tarifas y categorías
+└── reporteDeServiciosPrestados.js # Reporte de servicios prestados
+```
 
-💖 Créditos y Autoría
+---
+
+## ▶️ Cómo ejecutarlo
+
+**Demo en línea:** https://allisonrvargas.github.io/Campus-Parking/
+
+O en local, sin instalar nada: descarga o clona el repositorio y abre `index.html` en el navegador.
+
+**Cuenta de demostración:** `admin@campusparking.com` / `Admin123`
+
+---
+
+## 🔐 Sobre la seguridad
+
+Es una aplicación **solo de navegador** (sin servidor), pensada como proyecto de práctica:
+
+- La contraseña no se guarda en texto plano: se almacena como **hash SHA-256 con sal** en `localStorage`. Si el navegador tenía un usuario guardado con la versión anterior, se migra automáticamente al iniciar sesión.
+- Aun así, como no hay backend, **no es un sistema de autenticación real**: cualquiera con acceso al navegador puede leer o borrar los datos de `localStorage`. Para un uso real haría falta un servidor con sesiones.
+
+---
+
+## 💖 Créditos y Autoría
+
 Desarrollado con mucho café, lógica y estilo por Allison. ✨👩‍💻
+
+## 📄 Licencia
+
+MIT

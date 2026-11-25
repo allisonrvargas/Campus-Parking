@@ -1,10 +1,11 @@
 // Login
-function doLogin() {
+async function doLogin() {
   const email = $('li-email').value.trim();
   const pass = $('li-pass').value.trim();
+  await usuarioDemoListo;
   const usuario = G('cp_u', null);
 
-  if (usuario && email === usuario.email && pass === usuario.password) {
+  if (usuario && email === usuario.email && await claveCorrecta(usuario, pass)) {
     $('page-login').classList.add('hidden');
     $('app').classList.add('visible');
     $('tb-user').textContent = (usuario.nombre || 'A')[0].toUpperCase();
@@ -41,14 +42,14 @@ function abrirPerfil() {
 }
 
 // Guardar cambios del perfil
-function guardarPerfil() {
+async function guardarPerfil() {
   const usuario = G('cp_u', {});
   const passActual = $('p-pass-actual').value;
   const nuevoNombre = $('p-nom').value.trim();
   const nuevoEmail = $('p-email').value.trim();
   const nuevaPass = $('p-pass').value;
 
-  if (passActual !== usuario.password) {
+  if (!(await claveCorrecta(usuario, passActual))) {
     $('p-err').textContent = 'Contraseña actual incorrecta';
     $('p-err').style.display = 'block';
     $('p-ok').style.display = 'none';
@@ -71,7 +72,9 @@ function guardarPerfil() {
   usuario.nombre = nuevoNombre;
   usuario.email = nuevoEmail;
   if (nuevaPass !== '') {
-    usuario.password = nuevaPass;
+    usuario.sal = nuevaSal();
+    usuario.hash = await hashClave(nuevaPass, usuario.sal);
+    delete usuario.password;
   }
 
   S('cp_u', usuario);
