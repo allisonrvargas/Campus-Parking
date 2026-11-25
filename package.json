@@ -1,0 +1,15 @@
+{
+  "name": "campus-parking",
+  "version": "1.0.0",
+  "description": "Sistema web (solo navegador) para gestionar un estacionamiento. Las pruebas cargan la aplicación en jsdom.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
+  "devDependencies": {
+    "jsdom": "^26.0.0"
+  },
+  "engines": { "node": ">=20" },
+  "license": "MIT"
+}

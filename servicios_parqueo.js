@@ -73,8 +73,8 @@ function mostrarServicios() {
     const activo = !s.salida;
 
     return `<tr>
-      <td><strong>${s.placa}</strong></td>
-      <td>${s.tipo}</td>
+      <td><strong>${esc(s.placa)}</strong></td>
+      <td>${esc(s.tipo)}</td>
       <td>${s.fecha}</td>
       <td>${s.entrada}</td>
       <td>${s.slot}</td>

@@ -38,8 +38,8 @@ function mostrarTipos() {
 
   $('tb-tipos').innerHTML = lista.map((v, i) => `
     <tr>
-      <td><strong>${v.codigo}</strong></td>
-      <td>${v.nombre}</td>
+      <td><strong>${esc(v.codigo)}</strong></td>
+      <td>${esc(v.nombre)}</td>
       <td>Q${fmt(v.tarifa)}/h</td>
       <td>
         <button class="btn btn-gr btn-sm" onclick="editarTipo(${i})">✏️ Editar</button>
@@ -92,7 +92,7 @@ function cargarTiposSelect() {
   }
 
   $('r-tipo').innerHTML = lista.map(v =>
-    `<option value="${v.codigo}">${v.nombre} — Q${fmt(v.tarifa)}/h</option>`
+    `<option value="${esc(v.codigo)}">${esc(v.nombre)} — Q${fmt(v.tarifa)}/h</option>`
   ).join('');
 }
 
